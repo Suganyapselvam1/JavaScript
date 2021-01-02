@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>js</title>
+<script src="test.js"></script>
+</head>
+<body>
+<h1>Running javascript file</h1>
+
+<fieldset>
+    <legend>alert using JS</legend>
+    <button onclick="alert('sugu')">click me</button>
+</fieldset>
+<fieldset>
+    <legend>change HTML content</legend>
+    <p id='demo'>suganya</p>
+    <button onclick="document.getElementById('demo').innerHTML='venakt'">click me2</button>
+</fieldset>
+
+<fieldset>
+    <legend>change HTML image source</legend>
+    <button onclick="document.getElementById('demo1').src='img\\pic_bulbon.gif'">turn on light</button>
+    <img id="demo1" src="img\pic_bulboff.gif" alt="image" style="height: 50px;width: 50px;">
+    <button onclick="document.getElementById('demo1').src='img\\pic_bulboff.gif'">turn off light</button>
+</fieldset>
+
+<fieldset>
+    <legend>change HTML css font size</legend>
+    <button onclick="document.getElementById('demo2').style.fontSize='35px'">change font size</button>
+    <button onclick="document.getElementById('demo2').style.color='red'">change font color</button>
+    <button onclick="document.getElementById('demo2').style.backgroundColor='powderblue'">change font size</button>
+    <p id='demo2'>this is paragraph</p>
+</fieldset>
+
+<fieldset>
+    <legend>show or hide element</legend>
+    <button onclick="document.getElementById('demo3').style.display='none'">hide</button>
+    <button onclick="document.getElementById('demo3').style.display='block'">show</button>
+    <p id='demo3'>this is paragraph</p>
+</fieldset>
+
+</body>
+</html>
