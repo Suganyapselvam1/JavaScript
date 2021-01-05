@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>thid is JS string methos</title>
+    </head>
+    <body>
+        <fieldset>
+            <legend>
+
+            </legend>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                string.length 
+            </legend>
+           
+            <input id="inputid" type="text" onkeydown="funct(this.value)">
+            <div>
+                <label>Length:</label>
+                <span id='demo'></span>
+            </div><br>
+            <button onmouseover="funct1()">mouse over this</button>
+            <div>
+                <label>element  find:</label>
+                <span id='demo1'></span>
+            </div><br>
+            <button  onmouseout="funct2()">mouse out this</button>
+            <div>
+                <label>search:</label>
+                <span id='demo2'></span>
+            </div><br>
+            <button  onmouseout="funct3()">mouse out this</button>
+            <div>
+                <label>indexof:</label>
+                <span id='demo12'></span>
+            </div><br>
+            <button onclick="this.innerHTML=funct4()">click this </button>
+            <div>
+                <label>slice:</label>
+                <span id='demo3'></span>
+            </div><br>
+            <button onclick="this.innerHTML=funct5()">click this</button>
+            <div>
+                <label>substring:</label>
+                <span id='demo4'></span>
+            </div><br>
+            <button onclick="this.innerHTML=funct6()">click this</button>
+            <div>
+                <label>substr:</label>
+                <span id='demo5'></span>
+            </div><br>
+            <script>
+                function funct(str){
+                    //alert(str.length);
+                    document.getElementById("demo").innerHTML=str.length;
+                }
+                function funct1(){
+                    str = document.getElementById('inputid').value;
+                    console.log(str);
+                    //alert(str.length);
+                    document.getElementById("demo1").innerHTML="str[2]:"+str[2];
+                }
+                function funct2(){
+                    var str="Please locate where 'locate' occurs!"
+                    document.getElementById("demo2").innerHTML="search:"+str.search("locate");
+                }
+                function funct3(){
+                    var str="Please locate where 'locate' occurs!";
+                    document.getElementById("demo12").innerHTML="indexof:"+str.indexOf("o",23);
+                }
+                function funct4(){
+                    var str="Apple, Banana, Kiwi";
+                    document.getElementById("demo3").innerHTML="slice:"+str.slice(-8,-2);
+                }
+                function funct5(){
+                    var str="Apple, Banana, Kiwi";
+                    document.getElementById("demo4").innerHTML="substring:"+str.substring(7, 15);
+                }
+                function funct6(){
+                    var str="Apple, Banana, Kiwi";
+                    document.getElementById("demo5").innerHTML="substr:"+str.substr(10,2);
+                }
+            </script>
+        </fieldset>
+        
+         
+    </body>
+</html>

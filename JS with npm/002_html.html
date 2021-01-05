@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>events element</title>
+    </head>
+    <body onload="alert('sugu')">
+        <p>Click the bbbutton to display the date.</p>
+            <button onclick="DisplayDate()">the thime is </button>
+            <br><br><button onclick="this.innerHTML=Date()">the thime is </button>
+            <br><br><input type="text" onchange="DisplayDate()">
+            <br><br><button onmouseover="DisplayDate()">the thime is </button>
+            <br><br><button onmouseout="DisplayDate()">the thime is </button>
+            <br><br><input typr="text" onkeydown="DisplayDate()">
+        <script>
+            function DisplayDate(){
+                document.getElementById('demo').innerHTML=Date();
+            }
+        </script>
+        <p id="demo"></p>
+    </body>
+</html>
