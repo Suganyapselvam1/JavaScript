@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>this is Array</title>
+    </head>
+    
+    <body>
+        <h2>JavaScript Array</h2>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <p id="demoa"></p>
+        <p id="demob"></p>
+        <p id="democ"></p>
+        <button onclick="funct2()">click me</button>
+        <p></p>
+        <button onclick="funct1()">Click me</button>
+        <script>
+            //debugger;
+            var cars=["Saab", "Volvo", "BMW"];
+            cars[0]="opel";
+            document.getElementById("demo").innerHTML=cars.length;
+            var fruits=["Banana", "Orange", "Apple", "Mango"];
+            var text="<ul>";
+            for(i=0;i<fruits.length;i++){
+                text+="<li>"+fruits[i]+"</li>";
+            }
+            text+="</ul>";
+            document.getElementById("demo").innerHTML=text;
+
+            var text1="<ul>";
+            function funct(value){
+                text1+="<li>"+value+"</li>";
+            }
+            fruits.forEach(funct);
+            text1+="<ul>";
+            document.getElementById("demo1").innerHTML = text1;
+            fruits.push("lemon");
+            document.getElementById("demo2").innerHTML="lenght is: "+fruits.length;
+            fruits.pop();
+            document.getElementById("demo2").innerHTML="lenght is: "+fruits.length;
+            fruits[6]="Grapes";
+            document.getElementById("demo2").innerHTML=fruits[5];
+            document.getElementById("demo2").innerHTML=Array.isArray(fruits);
+            document.getElementById("demo2").innerHTML=fruits instanceof Array;
+            document.getElementById("demo2").innerHTML=fruits.join("*");
+            
+            document.getElementById("demo3").innerHTML=fruits;
+            function funct1(){
+                // fruits.shift();
+                // fruits.unshift("Drgon");
+                delete fruits[6];
+                document.getElementById("demo3").innerHTML=fruits;
+            }
+            function funct2(){
+                document.getElementById("demoa").innerHTML="orginl array: "+fruits;
+                var removed=fruits.splice(2,2,"abc","bcd");
+                document.getElementById("demob").innerHTML="new array: "+fruits;
+                document.getElementById("democ").innerHTML="removed array: "+removed;
+            }
+           
+        </script>
+        
+    </body>
+</html>
