@@ -35,17 +35,17 @@
                 <label>indexof:</label>
                 <span id='demo12'></span>
             </div><br>
-            <button onclick="this.innerHTML=funct4()">click this </button>
+            <button onclick="funct4()">click this </button>
             <div>
                 <label>slice:</label>
                 <span id='demo3'></span>
             </div><br>
-            <button onclick="this.innerHTML=funct5()">click this</button>
+            <button onclick="funct5()">click this</button>
             <div>
                 <label>substring:</label>
                 <span id='demo4'></span>
             </div><br>
-            <button onclick="this.innerHTML=funct6()">click this</button>
+            <button onclick="funct6()">click this</button>
             <div>
                 <label>substr:</label>
                 <span id='demo5'></span>
@@ -77,9 +77,13 @@
                     var str="Apple, Banana, Kiwi";
                     document.getElementById("demo4").innerHTML="substring:"+str.substring(7, 15);
                 }
+                var count = 5;
                 function funct6(){
+                    debugger;
                     var str="Apple, Banana, Kiwi";
-                    document.getElementById("demo5").innerHTML="substr:"+str.substr(10,2);
+
+                    document.getElementById("demo5").innerHTML="count: "+count+"substr:"+str.substr(10,2);
+                    count++;
                 }
             </script>
         </fieldset>
